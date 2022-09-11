@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             TodoTheme {
 
-                val navController =  rememberNavController()
+                val navController = rememberNavController()
                 NavHost(
                     navController = navController,
                     startDestination = Routes.TODO_LIST_ROUTE
@@ -59,7 +59,9 @@ class MainActivity : ComponentActivity() {
                             }
                         )
                     ) {
-                        AddEditTodoScreen(onPopBackStack = {navController.popBackStack()})
+                        AddEditTodoScreen(
+                            onPopBackStack = { navController.popBackStack() }
+                        )
                     }
                 }
 
